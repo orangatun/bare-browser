@@ -1,2 +1,4 @@
 # bare-browser
-A surf-inspired browser that's barely a browser. More window area, less chrome area
+A surf-inspired MacOS browser app that's barely a browser. More window area, less chrome area.
+
+This is a MacOS app.
