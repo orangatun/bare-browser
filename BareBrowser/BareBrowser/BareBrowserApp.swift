@@ -24,8 +24,8 @@ struct BareBrowserApp: App {
 struct WindowModifier : NSViewRepresentable {
     func updateNSView(_ nsView: NSViewType, context: Context) {}
     
+    var view: NSView = NSView()
     func makeNSView(context: Context) -> some NSView {
-        let view = NSView()
         DispatchQueue.main.async {
             if let window = view.window {
                 window.titleVisibility = .hidden
