@@ -59,6 +59,7 @@ struct WindowModifier : NSViewRepresentable {
 //                window.standardWindowButton(.closeButton)?.isHidden = true
 //                window.standardWindowButton(.miniaturizeButton)?.isHidden = true
 //                window.standardWindowButton(.zoomButton)?.isHidden = true
+                window.styleMask.insert(.fullSizeContentView)
             }
         }
         return view
