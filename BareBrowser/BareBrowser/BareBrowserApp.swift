@@ -39,9 +39,14 @@ struct BareBrowserApp: App {
 }
 
 struct WindowModifier : NSViewRepresentable {
-    func updateNSView(_ nsView: NSViewType, context: Context) {}
-    
     var view: NSView = NSView()
+    func updateNSView(_ nsView: NSViewType, context: Context) {
+        DispatchQueue.main.async {
+            if let window = view.window {
+                window.isMovableByWindowBackground = isMovable
+            }
+        }
+    }
     @Binding var isMovable: Bool
     func makeNSView(context: Context) -> some NSView {
         DispatchQueue.main.async {
