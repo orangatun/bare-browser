@@ -23,6 +23,13 @@ struct BareBrowserApp: App {
                 .hidden()
                 .keyboardShortcut("p")
                 
+                // Appliction terminate with Cmd+Q
+                Button("") {
+                    NSApplication.shared.terminate(nil)
+                }
+                .hidden()
+                .keyboardShortcut("w")
+               
             }
             .ignoresSafeArea(.all, edges: .all)
             .background(WindowModifier(isMovable: $isMovable))
