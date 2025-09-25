@@ -15,6 +15,7 @@ struct BareBrowserApp: App {
             ZStack {
                 ContentView()
             }
+            .ignoresSafeArea(.all, edges: .all)
         }
         .windowStyle(.hiddenTitleBar)
     }
