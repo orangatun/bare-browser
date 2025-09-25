@@ -11,8 +11,10 @@ import SwiftUI
 struct BareBrowserApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
             .background(WindowModifier())
+            ZStack {
+                ContentView()
+            }
         }
         .windowStyle(.hiddenTitleBar)
     }
